@@ -1,0 +1,28 @@
+# Plotting Data
+
+x = [0:0.01:0.98]
+y = sin(2*pi*4*x)
+plot(x,y) % gráfica de la función seno.
+hold on %mantiene la gráfica con la que se trabaja abierta para añadir más capas.
+y2 = cos(2*pi*4*x)
+plot(x,y2, "r")
+xlabel("time")
+ylabel("value")
+legend("seno", "coseno")
+title("Funciones Trigg")
+print -dpng "MyGraph.png" %guardar en el directorio la imagen como png.
+close %cerrar el gráfico.
+figure(1); plot(x,y);
+figure(2); plot(x,y2);
+subplot(1,2,1) %dividir el marco de gráficos en una fila y dos columnas y acceder al primer elemento. 
+plot(x,y,"r")
+subplot(1,2,2) %acceso al segundo elemento del marco dividido en dos columnas. 
+plot(x,y2,"g")
+axis([0.5 1 -1 1]) %definir los límites de los ejes, que van en x de 0.5 a 1 y en y de -1 a 1.
+print -dpng "MyGraph2.png"
+clf %limpia el marco de las figuras.
+A = magic(7)
+imagesc(A) %dibuja un grid con tantos colores como valores haya en la matriz. 
+print -dpng "MyGraph3.png"
+imagesc(A), colorbar, colormap gray; %escala de grises. Con la coma se pueden poner varios comandos concatenados. 
+print -dpng "MyGraph4.png"

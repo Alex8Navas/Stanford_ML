@@ -1,0 +1,29 @@
+Computing on Data
+
+A .*B %multiplicación de matrices elemento a elemento. 
+A .^2 %elevar elemento a elemento al cuadrado. 
+1 ./ A %inversa de una matriz, pero elemento a elemento, no la inversa en sí.
+log(A) %logaritmo de los elementos de la matriz elemento a elemento.  
+exp(A) %exponencial en base e de los elementos de la matriz. 
+abs(A) %elementos en valor absoluto.
+v + ones(length(v), 1) %sumar una unidad a cada elemento de un vector. 
+v + 1 %alternativa rápida. 
+A' %traspuesta de una matriz. 
+max(v) %máximo
+[val, ind] = max(a) %devuelve el valor y el índice del máximo.
+A < 4 %devolverá una matriz de valores booleanos T o F respondiendo a la query en cada posición. 
+magic(3) %matriz mágica (aquella cuyas sumas de los elementos de las filas, las columnas y la diagonal suman exactamente lo mismo).
+[r, c] = find(A > 8) %devuelve el índice (fila, columna) donde se cumple la query.
+sum(a) %suma de los elementos de un vector. 
+prod(a) %producto de los elementos de un vector. 
+floor(a) %trunca a enteros los elementos del vector. 
+ceil(a) %redondea a enteros los elementos del vector.
+max(A, [], 1) %máximos de cada columna de la matriz.  
+max(A, [], 2) %máximos de cada fila de la matriz.
+max(max(A)) %máximo valor de entre todos los elementos de la matriz. 
+max(A(:)) %alternativa para la función previa. 
+sum(A,1) %suma los elementos de cada columna de una matriz.
+sum(A,2) %suma los elementos de cada fila de una matriz.
+sum(sum(A .*eye(3)) %suma de lo elementos de la diagonal principal de una matriz 3x3
+flipup(eye(3)) %obtiene la imagen especular de la matriz identidad 3x3 (flip).
+pinv(A) %pesudo-inversa de la matriz A.  

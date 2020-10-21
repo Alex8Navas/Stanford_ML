@@ -1,0 +1,25 @@
+Moving Around Data
+
+sz = size(matrix) %dimesiones de la matriz
+size(sz)
+size(matrix, 1) %filas
+size(matrix, 2) % columnas
+length(vector) %longitud del vector
+Si el vector en lugar de en fila se ofrece en columnas no hay problemas, lo lee igual.
+pwd %indica tu directorio
+cd path %cambio de directorio
+ls %listado de objetos del directorio
+load archivo.dat %carga un archivo data
+load("archivo.dat") %forma alternativa
+who %muestra las variables del entorno.
+whos %extensión más detallada del entorno.
+clear variable %elimina del entorno una variable.
+clear %sin parámetro se cepilla todo el entorno. 
+save archivo.mat %guardar el archivo en formato mat.
+save archivo.mat v %guarda en binario 
+save archivo.mat v -ascii %guarda en ASCII
+A(2,:) %todas las columnas se señala con :
+A = [A, [4;5;6]] %añade una columna más de tres filas. 
+A(:) %poner todos los elementos de la matriz en una sola columna. 
+C = [A B] %concatenar matrices por columnas.
+C = [A; B] %concatenar matrices por filas.

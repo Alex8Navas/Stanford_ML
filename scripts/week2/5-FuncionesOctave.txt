@@ -1,0 +1,72 @@
+Control Statements
+
+v = zeros(10,1)
+for i=1:10,
+	v(i) = 2^i;
+end;
+v
+j = 1;
+while j < 5,
+	v(j) = 100;
+	j = j + 1;
+end;
+v
+k = 1;
+while true,
+	v(k) = 999;
+	k = k + 1;
+	if k == 6,
+		break;
+	end;
+end;
+v
+v(1)
+v(1) = 34
+
+if v(1) == 1,
+	disp("El valor es uno");
+elseif v(1) == 2,
+	disp("El valor es dos");
+else
+	disp("Se tiene otro valor")
+end;
+
+exit %salir de la consola.
+quit %otra forma de salir de la consola. 
+
+function y = squareThisNumber(x)
+y = x^2;
+end;
+
+squareThisNumber(5)
+
+function [y1,y2] = SKNumber(x)
+y1 = x^2;
+y2 = x^3;
+end;
+
+[a,b] = SKNumber(5)
+a
+b
+
+addPath "ruta del archivo con la función" %esto sirve para que la función se ejecute aunque se cambie de directorio. 
+
+X = [1 1; 1 2; 1 3]
+y = [1 ; 2 ; 3]
+
+% Definir la función de coste
+function J = costFunctionJ(X, y, theta)
+
+% X es la matriz de diseño que contiene los sujetos de entrenamiento. 
+% y son las etiquetas de la clase. 
+
+m = size(X,1); %número de sujetos del marco de entrenamiento. 
+predictions = X*theta; %predicciones de la hipótesis (theta) sobre todos los sujetos de entrenamiento. 
+sqrErrors = (predictions-y).^2; %cálculo de los errores al cuadrado. 
+J = 1/(2*m)*sum(sqrErrors);
+end;
+
+theta1 = [0;1] 
+costFunctionJ(X, y, theta1)
+theta2 = [1;1] 
+costFunctionJ(X, y, theta2)
